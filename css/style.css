@@ -1156,6 +1156,8 @@ blockquote cite:before {
     right: 100%;
 }
 
+
+
 /* Navbar Media Query */
 @media screen and (min-width: 992px) {
     .navbar .dropdown-menu {
