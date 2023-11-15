@@ -207,9 +207,6 @@ input[type="checkbox"] {
 
 input[type="submit"] {
     font-weight: 400;
-    font-family: 'Gilda Display', serif;
-    ;
-    text-transform: uppercase;
     background: #aa8453;
     color: #fff;
     padding: 8px 24px;
