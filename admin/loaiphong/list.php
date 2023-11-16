@@ -21,14 +21,14 @@
       <?php
       foreach ($dsloaiphong as $loaiphong) {
         extract($loaiphong);
-        $suadm = "index.php?act=suadm&id=" . $id;
-        $xoadm = "index.php?act=xoadm&id=" . $id;
+        $sualp = "index.php?act=sualp&id=" . $id;
+        $xoalp = "index.php?act=xoalp&id=" . $id;
         echo '<tr>
                       <td>' . $id . '</td>
                       <td>' . $name . '</td>
                       <td>' . number_format($gia, 0, ',', '.') . 'đ</td>
                       <td>
-                        <a href="' . $suadm . '"><input type="button" style="color: #fff; background-color: #0d6efd"  class="btn btn-primary" value="Sửa"></a>   
+                        <a href="' . $sualp . '"><input type="button" style="color: #fff; background-color: #0d6efd"  class="btn btn-primary" value="Sửa"></a>   
                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Xoá
                     </button>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
-                                    <a href="' . $xoadm . '"><button type="button" class="btn btn-primary">Xoá</button></a>
+                                    <a href="' . $xoalp . '"><button type="button" class="btn btn-primary">Xoá</button></a>
                                 </div>
                             </div>
                         </div>

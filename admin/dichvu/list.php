@@ -1,48 +1,72 @@
-<div class="row2">
-         <div class="row2 font_title">
-          <h1>DANH SÁCH LOẠI PHÒNG</h1>
-         </div>
-         <div class="row2 form_content ">
-          <form action="#" method="POST">
-           <div class="row2 mb10 formds_loai">
-           <table>
-            <tr>
-                <th></th>
-                <th>Mã phòng</th>
-                <th>Tên phòng</th>
-                <th>Giá</th>
-                <th></th>
-            </tr>
-            <?php
-            foreach ($dsloaiphong as $danhmuc) {
-                extract($danhmuc);
-                $suadm="index.php?act=suadm&id=".$id;
-                $xoadm="index.php?act=xoadm&id=".$id;
-                echo '<tr>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td>'.$id.'</td>
-                      <td>'.$name.'</td>
-                      <td>'.$gia.'</td>
-                      <td>
-                        <a href="'.$suadm.'"><input type="button" value="Sửa"></a>   
-                        <a href="'.$xoadm.'"><input type="button" value="Xóa"></a>
-                      </td>
-                      </tr>';
-            }
-            ?>
-            
-           </table>
-           </div>
-           <div class="row mb10 ">
-         <input class="mr20" type="button" value="CHỌN TẤT CẢ">
-         <input  class="mr20" type="button" value="BỎ CHỌN TẤT CẢ">
-<a href="index.php?act=addsp"> <input  class="mr20" type="button" value="NHẬP THÊM"></a>
-           </div>
-          </form>
-         </div>
-        </div>
 
-
-
-       
+<!-- Header Banner -->
+<div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="../img/slider/3.jpg">
+  <div class="container">
+    <div class="row">
+      <h1>ADMIN</h1>
+      <h5>Danh sách dịch vụ</h5>
     </div>
+  </div>
+</div>
+<div class="container mt-5 table-responsive">
+  <table id="example" class="display table table-bordered text-center align-middle" style="width:100%">
+    <thead>
+      <tr>
+        <th style="text-align: center;">Mã dịch vụ</th>
+        <th style="text-align: center;">Tên dịch vụ</th>
+        <th style="text-align: center;">Giá</th>
+        <th style="text-align: center;">Mô tả</th>
+        <th style="text-align: center;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($dsdichvu as $dichvu) : ?>
+        <?php
+        extract($dichvu);
+        $suadv = "index.php?act=suadv&id=" . $id;
+        $xoadv = "index.php?act=xoadv&id=" . $id;
+        ?>
+        <tr>
+          <td><?= $id ?></td>
+          <td><?= $name ?> </td>
+          <td><?= number_format($gia, 0, ',', '.') ?>đ</td>
+          <td><?= $mota ?> </td>
+          <td>
+            <a href="<?= $suadv ?>"><input style="color: #fff; background-color: #0d6efd" type="button" value="Sửa" class="btn btn-primary"></a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Xoá
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Xoá dịch vụ</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Bạn có muốn xoá dịch vụ?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                    <a href="<?= $xoadv ?>"><button type="button" class="btn btn-primary">Xoá</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>
+<div class="container my-5">
+  <div>
+    <a href="index.php?act=adddv"><input class="input-lp" style="letter-spacing: 0px;" type="submit" value="Nhập thêm" class="btn btn-primary"></a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+

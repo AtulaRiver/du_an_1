@@ -9,9 +9,20 @@
 </div>
 
 <div class="container my-5">
-    <form>
+    <form method="post" enctype="multipart/form-data" action="index.php?act=addp">
         <div class="space-y-12">
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="sm:col-span-full">
+                    <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Loại phòng:</label>
+                    <div class="mt-2">
+                        <select style="padding-left: 12px; padding-right: 12px; height: 36px;" name="idlp" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <?php foreach ($dsloaiphong as $loaiphong) : ?>
+                                <?php extract($loaiphong); ?>
+                                <option value="<?= $id ?>"><?= $name ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                </div>
                 <div class="sm:col-span-full">
                     <label for="" class="block text-sm font-medium leading-6 text-gray-900">Tên phòng:</label>
                     <input style="padding-left: 12px;" type="text" name="name" id="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -27,7 +38,7 @@
                             <div class="mt-4 justify-center flex text-sm leading-6 text-gray-600">
                                 <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                     <input style="padding-left: 12px;" id="file-upload" name="file-upload" type="file" class="sr-only">
-                                    <input type="file" name="image" id="image" class="hidden">
+                                    <input type="file" name="img" id="image" class="hidden">
                                 </label>
                             </div>
 
@@ -48,24 +59,22 @@
                 <div class="sm:col-span-3">
                     <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Người lớn:</label>
                     <div class="mt-2">
-                        <select style="padding-left: 12px; padding-right: 12px; height: 36px;" name="adults" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select style="padding-left: 12px; padding-right: 12px; height: 36px;" name="idnl" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <?php foreach ($listnguoilon as $nguoilon) : ?>
+                                <?php extract($nguoilon); ?>
+                                <option value="<?= $id ?>"><?= $soluong ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
                 </div>
                 <div class="sm:col-span-3">
                     <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Trẻ em:</label>
                     <div class="mt-2">
-                        <select style="padding-left: 12px; padding-right: 12px; height: 36px;" name="childs" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select style="padding-left: 12px; padding-right: 12px; height: 36px;" name="idte" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <?php foreach ($listtreem as $treem) : ?>
+                                <?php extract($treem); ?>
+                                <option value="<?= $id ?>"><?= $soluong ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
                 </div>
@@ -87,7 +96,7 @@
                 <div class="col-span-full">
                     <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Mô tả:</label>
                     <div class="mt-2">
-                        <textarea style="padding: 12px;" id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                        <textarea style="padding: 12px;" id="about" name="mota" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                     </div>
                 </div>
             </div>
@@ -95,8 +104,16 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
+            <div class="text-danger bold">
+                <?php
+                if (isset($thongbao) && ($thongbao != "")) {
+                    echo $thongbao;
+                }
+                ?>
+            </div>
             <button type="reset" class="text-sm font-semibold leading-6 text-gray-900">Nhập lại</button>
-            <button type="submit" style="background-color: #aa8453;" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lưu</button>
+            <a href="index.php?act=listp"><input class="text-sm font-semibold leading-6 text-gray-900" type="button" value="Danh sách"></a>
+            <input type="submit" style="background-color: #aa8453; text-transform: none; font-family: inherit; letter-spacing: 0;" name="themmoi" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"></input>
         </div>
     </form>
 </div>
