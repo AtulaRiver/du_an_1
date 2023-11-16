@@ -1,102 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>The BGV Luxury Hotel</title>
-    <link rel="shortcut icon" href="../img/favicon.png" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=EB+Garamond&family=Merriweather:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../css/plugins.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCJVJD2892"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-LCJVJD2892');
-    </script>
-</head>
-
-<body>
-    <!-- Preloader -->
-    <div class="preloader-bg"></div>
-    <div id="preloader">
-        <div id="preloader-status">
-            <div class="preloader-position loader"> <span></span> </div>
-        </div>
-    </div>
-    <!-- Progress scroll totop -->
-    <div class="progress-wrap cursor-pointer">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo-wrapper">
-                <a class="logo" href="index.html">
-                    <h2>THE BGV<span>Luxury Hotel</span></h2>
-                </a>
-            </div>
-            <!-- Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Về chúng tôi</a></li>
-                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Phòng & Căn hộ
-                            <i class="ti-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-
-                            <li><a href="rooms2.html" class="dropdown-item"><span>Các phòng</span></a></li>
-
-                            <li><a href="room-details.html" class="dropdown-item"><span>Chi tiết phòng</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Nhà hàng</a></li>
-                    <li class="nav-item"><a class="nav-link" href="spa-wellness.html">Spa</a></li>
-                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Tiện ích<i
-                                class="ti-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services.html" class="dropdown-item"><span>Dịch vụ</span></a></li>
-                            <li><a href="facilities.html" class="dropdown-item"><span>Cơ sở</span></a></li>
-                            <li><a href="gallery.html" class="dropdown-item"><span>Phòng trưng bày</span></a></li>
-                            <li><a href="team.html" class="dropdown-item"><span>Team</span></a></li>
-                            <li><a href="pricing.html" class="dropdown-item"><span>Giá cả</span></a></li>
-                            <li><a href="careers.html" class="dropdown-item"><span>Tuyển dụng</span></a></li>
-                            <li><a href="faq.html" class="dropdown-item"><span>F.A.Qs</span></a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="news2.html">Tin tức</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Slider -->
-    <header class="header slider-fade">
+<!-- Slider -->
+<header class="header slider-fade">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="text-center item bg-img" data-overlay-dark="2" data-background="../img/slider/2.jpg">
+            <div class="text-center item bg-img" data-overlay-dark="2" data-background="img/slider/2.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -117,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center item bg-img" data-overlay-dark="2" data-background="../img/slider/3.jpg">
+            <div class="text-center item bg-img" data-overlay-dark="2" data-background="img/slider/3.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -138,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center item bg-img" data-overlay-dark="3" data-background="../img/slider/1.jpg">
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="img/slider/1.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -270,10 +176,10 @@
                     </div>
                 </div>
                 <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
-                    <img src="../img/rooms/8.jpg" alt="" class="mt-90 mb-30">
+                    <img src="img/rooms/8.jpg" alt="" class="mt-90 mb-30">
                 </div>
                 <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
-                    <img src="../img/rooms/2.jpg" alt="">
+                    <img src="img/rooms/2.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -290,7 +196,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="../img/rooms/1.jpg" alt=""> </div> <span
+                        <div class="position-re o-hidden"> <img src="img/rooms/1.jpg" alt=""> </div> <span
                             class="category"><a href="rooms2.html">Đặt phòng</a></span>
                         <div class="con">
                             <h6><a href="room-details.html">1.000.000Đ / Đêm</a></h6>
@@ -315,7 +221,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="../img/rooms/2.jpg" alt=""> </div> <span
+                        <div class="position-re o-hidden"> <img src="img/rooms/2.jpg" alt=""> </div> <span
                             class="category"><a href="rooms2.html">Đặt phòng</a></span>
                         <div class="con">
                             <h6><a href="room-details.html">2.000.000Đ / Đêm</a></h6>
@@ -340,7 +246,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="../img/rooms/3.jpg" alt=""> </div> <span
+                        <div class="position-re o-hidden"> <img src="img/rooms/3.jpg" alt=""> </div> <span
                             class="category"><a href="rooms2.html">Đặt phòng</a></span>
                         <div class="con">
                             <h6><a href="room-details.html">2.500.000Đ / Đêm</a></h6>
@@ -365,7 +271,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="../img/rooms/4.jpg" alt=""> </div> <span
+                        <div class="position-re o-hidden"> <img src="img/rooms/4.jpg" alt=""> </div> <span
                             class="category"><a href="rooms2.html">Đặt phòng</a></span>
                         <div class="con">
                             <h6><a href="room-details.html">3.000.000Đ / Đêm</a></h6>
@@ -390,7 +296,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="../img/rooms/7.jpg" alt=""> </div> <span
+                        <div class="position-re o-hidden"> <img src="img/rooms/7.jpg" alt=""> </div> <span
                             class="category"><a href="rooms2.html">Đặt phòng</a></span>
                         <div class="con">
                             <h6><a href="room-details.html">4.000.000$ / Đêm</a></h6>
@@ -438,7 +344,7 @@
                 <div class="col-md-8">
                     <div class="owl-carousel owl-theme">
                         <div class="pricing-card">
-                            <img src="../img/pricing/1.jpg" alt="">
+                            <img src="img/pricing/1.jpg" alt="">
                             <div class="desc">
                                 <div class="name">Dọn phòng</div>
                                 <div class="amount">200.000Đ<span>/ lần</span></div>
@@ -450,7 +356,7 @@
                             </div>
                         </div>
                         <div class="pricing-card">
-                            <img src="../img/pricing/2.jpg" alt="">
+                            <img src="img/pricing/2.jpg" alt="">
                             <div class="desc">
                                 <div class="name">Đồ uống</div>
                                 <div class="amount">300.000Đ<span>/ ngày</span></div>
@@ -462,7 +368,7 @@
                             </div>
                         </div>
                         <div class="pricing-card">
-                            <img src="../img/pricing/3.jpg" alt="">
+                            <img src="img/pricing/3.jpg" alt="">
                             <div class="desc">
                                 <div class="name">Đồ ăn sáng</div>
                                 <div class="amount">50.000Đ<span>/ ngày</span></div>
@@ -474,7 +380,7 @@
                             </div>
                         </div>
                         <div class="pricing-card">
-                            <img src="../img/pricing/4.jpg" alt="">
+                            <img src="img/pricing/4.jpg" alt="">
                             <div class="desc">
                                 <div class="name">An toàn & Bảo mật</div>
                                 <div class="amount">100.000Đ<span>/ ngày</span></div>
@@ -492,7 +398,7 @@
     </section>
     <!-- Promo Video -->
     <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="3"
-        data-background="../img/slider/2.jpg">
+        data-background="img/slider/2.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
@@ -585,7 +491,7 @@
     </section>
     <!-- Testiominals -->
     <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="../img/slider/2.jpg"
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/2.jpg"
             data-overlay-dark="3">
             <div class="container">
                 <div class="row">
@@ -598,7 +504,7 @@
                             </div>
                             <div class="owl-carousel owl-theme">
                                 <div class="item">
-                                    <span class="quote"><img src="../img/quot.png" alt=""></span>
+                                    <span class="quote"><img src="img/quot.png" alt=""></span>
                                     <p>"Tôi đã có một trải nghiệm lưu trú tuyệt vời tại BGV Hotel! Dịch vụ tận tâm
                                         và chu đáo từ đội ngũ nhân viên đã khiến tôi cảm thấy như đang ở nhà. Phòng nghỉ
                                         tại đây rất sang trọng và thoải mái, với đầy đủ tiện nghi cần thiết. Bữa sáng đa
@@ -606,7 +512,7 @@
                                         phương tuyệt vời. Tôi chắc chắn sẽ quay trở lại và giới thiệu BGV Hotel
                                         cho bạn bè và gia đình của mình."</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="../img/team/4.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="img/team/4.jpg" alt=""> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
@@ -615,7 +521,7 @@
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <span class="quote"><img src="../img/quot.png" alt=""></span>
+                                    <span class="quote"><img src="img/quot.png" alt=""></span>
                                     <p>"Tôi đã có một trải nghiệm lưu trú tuyệt vời tại BGV Hotel! Dịch vụ tận tâm
                                         và chu đáo từ đội ngũ nhân viên đã khiến tôi cảm thấy như đang ở nhà. Phòng nghỉ
                                         tại đây rất sang trọng và thoải mái, với đầy đủ tiện nghi cần thiết. Bữa sáng đa
@@ -623,7 +529,7 @@
                                         phương tuyệt vời. Tôi chắc chắn sẽ quay trở lại và giới thiệu BGV Hotel
                                         cho bạn bè và gia đình của mình."</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="../img/team/1.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
@@ -632,7 +538,7 @@
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <span class="quote"><img src="../img/quot.png" alt=""></span>
+                                    <span class="quote"><img src="img/quot.png" alt=""></span>
                                     <p>"Tôi đã có một trải nghiệm lưu trú tuyệt vời tại BGV Hotel! Dịch vụ tận tâm
                                         và chu đáo từ đội ngũ nhân viên đã khiến tôi cảm thấy như đang ở nhà. Phòng nghỉ
                                         tại đây rất sang trọng và thoải mái, với đầy đủ tiện nghi cần thiết. Bữa sáng đa
@@ -640,7 +546,7 @@
                                         phương tuyệt vời. Tôi chắc chắn sẽ quay trở lại và giới thiệu BGV Hotel
                                         cho bạn bè và gia đình của mình."</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="../img/team/5.jpg" alt=""> </div>
+                                        <div class="author-img"> <img src="img/team/5.jpg" alt=""> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
@@ -661,7 +567,7 @@
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="restaurant.html"><img src="../img/restaurant/1.jpg" alt=""></a>
+                        <a href="restaurant.html"><img src="img/restaurant/1.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
@@ -699,14 +605,14 @@
                 </div>
                 <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
                     <div class="img">
-                        <a href="spa-wellness.html"><img src="../img/spa/3.jpg" alt=""></a>
+                        <a href="spa-wellness.html"><img src="img/spa/3.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="spa-wellness.html"><img src="../img/spa/2.jpg" alt=""></a>
+                        <a href="spa-wellness.html"><img src="img/spa/2.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
@@ -745,7 +651,7 @@
                 </div>
                 <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
                     <div class="img">
-                        <a href="spa-wellness.html"><img src="../img/spa/1.jpg" alt=""></a>
+                        <a href="spa-wellness.html"><img src="img/spa/1.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -764,7 +670,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/1.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/1.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>02</i> </a>
                                 </div>
@@ -776,7 +682,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/2.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/2.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>04</i> </a>
                                 </div>
@@ -788,7 +694,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/3.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/3.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>06</i> </a>
                                 </div>
@@ -800,7 +706,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/4.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/4.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>08</i> </a>
                                 </div>
@@ -814,7 +720,7 @@
                         </div>
 
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/6.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/6.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>08</i> </a>
                                 </div>
@@ -826,7 +732,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="../img/news/5.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="img/news/5.jpg" alt="">
                                 <div class="date">
                                     <a href="post.html"> <span>Dec</span> <i>08</i> </a>
                                 </div>
@@ -846,7 +752,7 @@
     </section>
     <!-- Reservation & Booking Form -->
     <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="../img/slider/2.jpg"
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/2.jpg"
             data-overlay-dark="2">
             <div class="container">
                 <div class="row">
@@ -942,120 +848,25 @@
                 <div class="col-md-7">
                     <div class="owl-carousel owl-theme">
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/1.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/1.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/2.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/2.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/3.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/3.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/4.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/4.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/5.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/5.png" alt=""></a>
                         </div>
                         <div class="clients-logo">
-                            <a href="#0"><img src="../img/clients/6.png" alt=""></a>
+                            <a href="#0"><img src="img/clients/6.png" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer-column footer-about">
-                            <h3 class="footer-title">Giới thiệu</h3>
-                            <p class="footer-about-text" style="text-align: justify;">Chào mừng bạn đến khách sạn năm sao sang trọng nhất ở Việt Nam.
-                                Khách sạn BGV tọa lạc tại
-                                trung tâm thành phố lịch sử, nằm ngay bên cạnh những điểm du lịch nổi tiếng và trung tâm
-                                mua sắm
-                                sầm uất. Với hệ thống phòng nghỉ sang trọng được thiết kế độc đáo, chúng tôi cam kết
-                                mang đến
-                                cho khách hàng một trải nghiệm lưu trú tuyệt vời và thoải mái nhất.</p>
-
-                            <div class="footer-language"> <i class="lni ti-world"></i>
-                                <select onchange="location = this.value;">
-                                    <option value="http://duruthemes.com/">Tiếng Việt</option>
-                                    <option value="http://duruthemes.com/">English</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 offset-md-1">
-                        <div class="footer-column footer-explore clearfix">
-                            <h3 class="footer-title">Khám Phá</h3>
-                            <ul class="footer-explore-list list-unstyled">
-                                <li><a href="index.html">Trang Chủ</a></li>
-                                <li><a href="rooms.html">Phòng & Căn Hộ</a></li>
-                                <li><a href="restaurant.html">Nhà Hàng</a></li>
-                                <li><a href="spa-wellness.html">Spa & Sức khỏe</a></li>
-                                <li><a href="about.html">Về Chúng Tôi</a></li>
-                                <li><a href="contact.html">Liên Hệ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-column footer-contact">
-                            <h3 class="footer-title">Liên hệ</h3>
-                            <p class="footer-contact-text">Số 1 đường Văn Minh, Đình Thôn,<br>Hoài Đức, Hà Nội
-                            </p>
-                            <div class="footer-contact-info">
-                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 0345 6130 90</p>
-                                <p class="footer-contact-mail">Thebgvhotel@gmail.com</p>
-                            </div>
-                            <div class="footer-about-social-list">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                                <a href="#"><i class="ti-twitter"></i></a>
-                                <a href="#"><i class="ti-youtube"></i></a>
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="ti-pinterest"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-bottom-inner">
-                            <p class="footer-bottom-copy-right">Group 7 <a href="#">Dự Án 1</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- jQuery -->
-    <script src="../js/jquery-3.6.3.min.js"></script>
-    <script src="../js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="../js/modernizr-2.6.2.min.js"></script>
-    <script src="../js/imagesloaded.pkgd.min.js"></script>
-    <script src="../js/jquery.isotope.v3.0.2.js"></script>
-    <script src="../js/pace.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/scrollIt.min.js"></script>
-    <script src="../js/jquery.waypoints.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/jquery.stellar.min.js"></script>
-    <script src="../js/jquery.magnific-popup.js"></script>
-    <script src="../js/YouTubePopUp.js"></script>
-    <script src="../js/select2.js"></script>
-    <script src="../js/datepicker.js"></script>
-    <script src="../js/smooth-scroll.min.js"></script>
-    <script src="../js/custom.js"></script>
-
-</body>
-
-<!-- Mirrored from duruthemes.com/demo/html/BGV/demo1-light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 13:53:50 GMT -->
-
-</html>

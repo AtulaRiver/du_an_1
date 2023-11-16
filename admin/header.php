@@ -45,6 +45,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.php">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=addlp">Loại Phòng</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=addp">Phòng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?act=adddv">Dịch vụ</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=dskh">Khách hàng</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=dsbl">Bình Luận</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=thongke">Thống kê</a></li>

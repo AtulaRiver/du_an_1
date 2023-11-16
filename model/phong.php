@@ -1,7 +1,7 @@
 <?php
-function insert_phong($tensp, $giasp, $hinh, $mota, $iddm)
+function insert_phong($name, $price, $img, $idnl, $idte, $idlp, $checkin, $checkout, $mota)
 {
-    $sql = "insert into phong(name, price, img, nguoilon, treem, mota, checkin, checkout) values('$tensp', '$giasp', '$hinh', '$mota', '$iddm')";
+    $sql = "insert into phong(name, price, img, idnl, idte, idlp, checkin, checkout, mota) values('" . $name . "', '" . $price . "', '" . $img . "', '" . $idnl . "', '" . $idte . "', '" . $idlp . "', '" . $checkin . "', '" . $checkout . "', '" . $mota . "')";
     pdo_execute($sql);
 }
 
@@ -11,17 +11,30 @@ function delete_phong($id)
     pdo_query($sql);
 }
 
-function loadall_phong($kyw = "", $iddm = 0)
+function loadname_loaiphong() {
+    $sql = "select lp.name from loaiphong lp join phong p on lp.id = p.idlp";
+    return $listname = pdo_query($sql);
+}
+
+function loadall_phong($idlp = 0)
 {
     $sql = "select * from phong where 1";
-    if ($kyw != "") {
-        $sql .= " and name like '%" . $kyw . "%'";
-    }
-    if ($iddm > 0) {
-        $sql .= " and iddm = '" . $iddm . "'";
+    if ($idlp > 0) {
+        $sql .= " and idlp = '" . $idlp . "'";
     }
     $sql .= " order by id desc";
     return $listphong = pdo_query($sql);
+}
+
+function loadall_nguoilon()
+{
+    $sql = "select * from nguoilon";
+    return $listnguoilon = pdo_query($sql);
+}
+function loadall_treem()
+{
+    $sql = "select * from treem";
+    return $listtreem = pdo_query($sql);
 }
 
 function loadall_phong_bieudo($kyw = "", $iddm = 0)
@@ -59,29 +72,19 @@ function loadone_phong($id)
     $sql = "select * from phong where id = " . $id;
     return $sp = pdo_query_one($sql);
 }
-function load_ten_dm($iddm)
-{
-    if ($iddm > 0) {
-        $sql = "select * from loaiphong where id = " . $iddm;
-        $dm = pdo_query_one($sql);
-        extract($dm);
-        return $name;
-    } else {
-        return "";
-    }
-}
+
 function load_phong_cungloai($id, $iddm)
 {
     $sql = "select * from phong where iddm = " . $iddm . " and id <> " . $id;
     return $listphong = pdo_query($sql);
 }
 
-function update_phong($id, $iddm, $tensp, $giasp, $mota, $hinh)
+function update_phong($id, $name, $price, $img, $idnl, $idte, $idlp, $checkin, $checkout, $mota)
 {
-    if ($hinh != "") {
-        $sql = "update phong set iddm = '" . $iddm . "', name = '" . $tensp . "', price = '" . $giasp . "', mota = '" . $mota . "', img = '" . $hinh . "' where id =" . $id;
+    if ($img != "") {
+        $sql = "update phong set name = '" . $name . "', price = '" . $price . "', img = '" . $img . "', idnl = '" . $idnl . "', idte = '" . $idte . "', idlp = '" . $idlp . "', checkin = '" . $checkin . "', checkout = '" . $checkout . "', mota = '" . $mota . "' where id =" . $id;
     } else {
-        $sql = "update phong set iddm = '" . $iddm . "', name = '" . $tensp . "', price = '" . $giasp . "', mota = '" . $mota . "' where id =" . $id;
+        $sql = "update phong set name = '" . $name . "', price = '" . $price . "', idnl = '" . $idnl . "', idte = '" . $idte . "', idlp = '" . $idlp . "', checkin = '" . $checkin . "', checkout = '" . $checkout . "', mota = '" . $mota . "' where id =" . $id;
     }
 
     pdo_execute($sql);

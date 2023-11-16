@@ -31,14 +31,17 @@
     </div>
 
     <div class="mt-6 flex items-center justify-end gap-x-6">
+      <div class="text-danger bold">
+        <?php
+        if (isset($thongbao) && ($thongbao != "")) {
+          echo $thongbao;
+        }
+        ?>
+      </div>
       <button type="reset" class="text-sm font-semibold leading-6 text-gray-900">Nhập lại</button>
       <a href="index.php?act=listlp"><input class="text-sm font-semibold leading-6 text-gray-900" type="button" value="Danh sách"></a>
       <input type="submit" style="background-color: #aa8453; text-transform: none; font-family: inherit; letter-spacing: 0;" name="themmoi" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"></input>
     </div>
-    <?php
-    if (isset($thongbao) && ($thongbao != "")) {
-      echo $thongbao;
-    }
-    ?>
+
   </form>
 </div>

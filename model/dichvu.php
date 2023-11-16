@@ -1,7 +1,7 @@
 <?php
 
-function insert_dvphong($name,$mota){
-    $sql = "insert into dichvu(name,mota) values('$name','$mota')";
+function insert_dvphong($name, $gia, $mota){
+    $sql = "insert into dichvu(name, gia, mota) values('$name', '$gia', '$mota')";
     pdo_execute($sql);
 }
 function delete_dvphong($id){
@@ -18,8 +18,8 @@ function loadone_dvphong($id){
     $dv=pdo_query_one($sql);
     return $dv;
 }
-function update_dvphong($id,$name,$mota){
-    $sql = "update dichvu set name='".$name."',mota='".$mota."' where id=".$id;
+function update_dvphong($id ,$name, $gia, $mota){
+    $sql = "update dichvu set name='".$name."', mota='".$mota."', gia='".$gia."' where id=".$id;
     pdo_execute($sql);
 }
 ?>
