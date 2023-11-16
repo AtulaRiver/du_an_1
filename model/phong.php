@@ -62,7 +62,7 @@ function loadone_phong($id)
 function load_ten_dm($iddm)
 {
     if ($iddm > 0) {
-        $sql = "select * from danhmuc where id = " . $iddm;
+        $sql = "select * from loaiphong where id = " . $iddm;
         $dm = pdo_query_one($sql);
         extract($dm);
         return $name;
