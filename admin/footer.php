@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 17f4317759f28554daddac37ed77e015bc5687dc
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
@@ -95,4 +99,8 @@
 
     <!-- Mirrored from duruthemes.com/demo/html/cappa/demo1-light/rooms3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 13:54:07 GMT -->
 
+<<<<<<< HEAD
     </html>
+=======
+    </html>
+>>>>>>> 17f4317759f28554daddac37ed77e015bc5687dc

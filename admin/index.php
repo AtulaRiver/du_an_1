@@ -3,6 +3,7 @@ include "../model/pdo.php";
 include "../model/loaiphong.php";
 include "../model/phong.php";
 include "../model/dichvu.php";
+include "../model/taikhoan.php";
 include "header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -177,8 +178,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $dsdichvu = loadall_dvphong();
             include "dichvu/list.php";
             break;
+        
+            case "dangky";
+            if(isset($_POST['damgky']) && ($_POST['dangky'])){
+                $email=$_POST['email'];
+                $user=$_POST['user'];
+                $pass=$_POST['pass'];
+                insert_taikhoan($email,$user,$pass);
+                $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để truy cập vào website";
+            }
+            include("admin/taikhoan/dangky.php");
+            break;
     }
 } else {
     include "home.php";
 }
 include "footer.php";
+

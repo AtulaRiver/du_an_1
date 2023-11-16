@@ -5737,7 +5737,7 @@ button.mfp-arrow {
 
 .footer-explore-list li a:hover {
     padding-left: 15px;
-    color: #aa8453);
+    color: #aa8453;
 }
 
 .footer-explore-list li a:before {
@@ -6204,4 +6204,7 @@ select {
     .video-fullscreen-wrap .caption {
         text-align: center;
     }
+}
+.thongbao{
+    color: red;
 }
