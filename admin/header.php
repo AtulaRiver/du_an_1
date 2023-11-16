@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
     <link rel="stylesheet" href="../css/plugins.css" />
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/more-css.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
 
@@ -52,9 +52,4 @@
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
     </nav>
-
-=======
-    </nav>
->>>>>>> 17f4317759f28554daddac37ed77e015bc5687dc
