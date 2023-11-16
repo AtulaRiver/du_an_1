@@ -1,39 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án 1</title>
-    <link rel="stylesheet" href="../css/css.css">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-     
-    </style>
-</head>
-<body>
-    <div class="boxcenter">
-       <!-- BIGIN HEADER -->
-       <header>
-        <div class="row mb header_admin">
-            <h1>Admin</h1>
-        </div>
-        <div class="row mb menu">
-            <ul>
-                
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="index.php?act=listsp">Loại phòng</a></li>
-              <li><a href="">Phòng</a></li>
-              <li><a href="">Khách hàng</a></li>
-              <li><a href="">Bình luận</a></li>
-              <li><a href="">Thống kê</a></li>
-            </ul>
-        </div>
-       </header>
-        <!-- END HEADER -->
-=======
 
 <head>
     <meta charset="utf-8">
@@ -83,6 +49,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=addlp">Loại Phòng</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=addp">Phòng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?act=adddv">Dịch vụ</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=dskh">Khách hàng</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=dsbl">Bình Luận</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?act=thongke">Thống kê</a></li>
@@ -90,4 +57,4 @@
             </div>
         </div>
     </nav>
->>>>>>> main
+
