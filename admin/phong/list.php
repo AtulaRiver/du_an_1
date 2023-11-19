@@ -44,6 +44,7 @@
                 extract($phong);
                 $suap = "index.php?act=suap&id=" . $id;
                 $xoap = "index.php?act=xoap&id=" . $id;
+                $modalId = "exampleModal" . $id;
                 $imgpath = "../img/rooms/" . $img;
                 if (is_file($imgpath)) {
                     $hinh = "<img src='" . $imgpath . "' style='height: 80px;'>";
@@ -63,12 +64,12 @@
                     <td><?= $mota ?> </td>
                     <td>
                         <a href="<?= $suap ?>"><input style="color: #fff; background-color: #0d6efd" type="button" value="Sửa" class="btn btn-primary"></a>
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#<?= $modalId ?>">
                             Xoá
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="<?= $modalId ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">

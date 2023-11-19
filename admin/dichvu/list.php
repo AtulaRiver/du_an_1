@@ -13,6 +13,8 @@
       <tr>
         <th style="text-align: center;">Mã dịch vụ</th>
         <th style="text-align: center;">Tên dịch vụ</th>
+        <th style="text-align: center;">Tên url</th>
+        <th style="text-align: center;">Ảnh</th>
         <th style="text-align: center;">Giá</th>
         <th style="text-align: center;">Mô tả</th>
         <th style="text-align: center;">Action</th>
@@ -24,20 +26,30 @@
         extract($dichvu);
         $suadv = "index.php?act=suadv&id=" . $id;
         $xoadv = "index.php?act=xoadv&id=" . $id;
+        $imgpath = "../img/facilities/" . $img;
+        if (is_file($imgpath)) {
+          $hinh = "<img src='" . $imgpath . "' style='height: 160px; width: 900px; margin: auto;'>";
+        } else {
+          $hinh = "no photo";
+        }
+        $modalId = "exampleModal" . $id;
         ?>
         <tr>
           <td><?= $id ?></td>
           <td><?= $name ?> </td>
+          <td><?= $url ?> </td>
+          <td><?= $hinh ?> </td>
           <td><?= number_format($gia, 0, ',', '.') ?>đ</td>
           <td><?= $mota ?> </td>
           <td>
             <a href="<?= $suadv ?>"><input style="color: #fff; background-color: #0d6efd" type="button" value="Sửa" class="btn btn-primary"></a>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#<?= $modalId ?>">
               Xoá
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="<?= $modalId ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">

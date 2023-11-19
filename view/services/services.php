@@ -70,7 +70,7 @@
              </div>
          </div>
          <div class="row">
-             <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
+            <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
                  <div class="content">
                      <div class="cont text-left">
                          <div class="info">

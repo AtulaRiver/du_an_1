@@ -1,7 +1,7 @@
 <?php
 
-function insert_dvphong($name, $gia, $mota){
-    $sql = "insert into dichvu(name, gia, mota) values('$name', '$gia', '$mota')";
+function insert_dvphong($name, $url, $img, $gia, $mota){
+    $sql = "insert into dichvu(name, url, img, gia, mota) values('$name', '$url', '$img', '$gia', '$mota')";
     pdo_execute($sql);
 }
 function delete_dvphong($id){
@@ -10,6 +10,11 @@ function delete_dvphong($id){
 }
 function loadall_dvphong(){
     $sql="select * from dichvu order by id desc";
+    $dvphong=pdo_query($sql);
+    return $dvphong ;
+}
+function loadall_dvphong_home(){
+    $sql="select * from dichvu where 1 order by id asc";
     $dvphong=pdo_query($sql);
     return $dvphong ;
 }

@@ -33,7 +33,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="index.html">
+                <a class="logo" href="../index.php">
                     <h2>THE BGV<span>Luxury Hotel</span></h2>
                 </a>
             </div>

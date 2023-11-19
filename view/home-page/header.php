@@ -64,7 +64,7 @@
                             <i class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
 
-                            <li><a href="rooms2.html" class="dropdown-item"><span>Các phòng</span></a></li>
+                            <li><a href="index.php?act=list-room" class="dropdown-item"><span>Các phòng</span></a></li>
 
                             <li><a href="index.php?act=room-detail" class="dropdown-item"><span>Chi tiết phòng</span></a></li>
                         </ul>
@@ -76,7 +76,7 @@
                                 class="ti-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="index.php?act=services" class="dropdown-item"><span>Dịch vụ</span></a></li>
-                            <li><a href="index.php?act=facilities" class="dropdown-item"><span>Cơ sở</span></a></li>
+                            <li><a href="index.php?act=facilities" class="dropdown-item"><span>Tiện ích</span></a></li>
                             <li><a href="index.php?act=gallery" class="dropdown-item"><span>Phòng trưng bày</span></a></li>
                             <li><a href="index.php?act=team" class="dropdown-item"><span>Team</span></a></li>
                             <li><a href="index.php?act=pricing" class="dropdown-item"><span>Giá cả</span></a></li>
