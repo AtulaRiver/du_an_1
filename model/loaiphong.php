@@ -1,13 +1,13 @@
 <?php
 
-function insert_loaiphong($name, $gia)
+function insert_loaiphong($name, $img, $gia)
 {
-    $sql = "insert into loaiphong(name,gia) values('$name','$gia')";
+    $sql = "insert into loaiphong(name, img, gia) values('$name', '$img', '$gia')";
     pdo_execute($sql);
 }
 function delete_loaiphong($id)
 {
-    $sql = "delete from loaiphong where id=" . $id;
+    $sql = "delete from loaiphong where id= " . $id;
     pdo_execute($sql);
 }
 function loadall_loaiphong()
@@ -16,6 +16,14 @@ function loadall_loaiphong()
     $dsloaiphong = pdo_query($sql);
     return $dsloaiphong;
 }
+
+function loadall_loaiphong_home()
+{
+    $sql = "select * from loaiphong where 1 order by id asc limit 0,5";
+    $dsloaiphong = pdo_query($sql);
+    return $dsloaiphong;
+}
+
 function loadone_loaiphong($id)
 {
     $sql = "select * from loaiphong where id=" . $id;

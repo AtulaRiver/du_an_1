@@ -26,6 +26,12 @@ function loadall_phong($idlp = 0)
     return $listphong = pdo_query($sql);
 }
 
+function loadall_phong_page()
+{
+    $sql = "select * from phong where 1 order by id asc";
+    return $listphong = pdo_query($sql);
+}
+
 function loadall_nguoilon()
 {
     $sql = "select * from nguoilon";

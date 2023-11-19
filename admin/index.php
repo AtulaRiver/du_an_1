@@ -17,7 +17,15 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $name = $_POST['name'];
                 $gia = $_POST['gia'];
-                insert_loaiphong($name, $gia);
+                $img = $_FILES['img']['name'];
+                $target_dir = "../img/type-of-room/";
+                $target_file = $target_dir . basename($_FILES["img"]["name"]);
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                    // File moved successfully.
+                } else {
+                    echo "Error: File could not be moved.";
+                }
+                insert_loaiphong($name, $img, $gia);
                 $thongbao = "Thêm thành công";
             }
             include "loaiphong/add.php";
@@ -138,9 +146,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "adddv":
             if (isset($_POST['themdv']) && ($_POST['themdv'])) {
                 $name = $_POST['name'];
+                $url = $_POST['url'];
                 $gia = $_POST['gia'];
                 $mota = $_POST['mota'];
-                insert_dvphong($name, $gia, $mota);
+                $img = $_FILES['img']['name'];
+                $target_dir = "../img/facilities/";
+                $target_file = $target_dir . basename($_FILES["img"]["name"]);
+                if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                    // File moved successfully.
+                } else {
+                    echo "Error: File could not be moved.";
+                }
+                insert_dvphong($name, $url, $img, $gia, $mota);
                 $thongbao = "Thêm thành công";
             }
             include "dichvu/add.php";
@@ -151,7 +168,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "dichvu/list.php";
             break;
 
-        case "xoadv";
+        case "xoadv":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_dvphong($_GET['id']);
             }
@@ -159,14 +176,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "dichvu/list.php";
             break;
 
-        case "suadv";
+        case "suadv":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $dv = loadone_dvphong($_GET['id']);
             }
             include "dichvu/update.php";
             break;
 
-        case "updatedv";
+        case "updatedv":
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
                 $name = $_POST['name'];

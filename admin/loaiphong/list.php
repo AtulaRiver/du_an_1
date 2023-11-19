@@ -13,6 +13,7 @@
       <tr>
         <th style="text-align: center;">Mã phòng</th>
         <th style="text-align: center;">Tên loại phòng</th>
+        <th style="text-align: center;">Ảnh</th>
         <th style="text-align: center;">Giá</th>
         <th style="text-align: center;">Action</th>
       </tr>
@@ -23,18 +24,26 @@
         extract($loaiphong);
         $sualp = "index.php?act=sualp&id=" . $id;
         $xoalp = "index.php?act=xoalp&id=" . $id;
+        $modalId = "exampleModal" . $id;
+        $imgpath = "../img/type-of-room/" . $img;
+        if (is_file($imgpath)) {
+          $hinh = "<img src='" . $imgpath . "' style='height: 160px; width: 120px; margin: auto;'>";
+        } else {
+          $hinh = "no photo";
+        }
         echo '<tr>
                       <td>' . $id . '</td>
                       <td>' . $name . '</td>
+                      <td>' . $hinh . '</td>
                       <td>' . number_format($gia, 0, ',', '.') . 'đ</td>
                       <td>
                         <a href="' . $sualp . '"><input type="button" style="color: #fff; background-color: #0d6efd"  class="btn btn-primary" value="Sửa"></a>   
-                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#' . $modalId . '">
                         Xoá
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="' . $modalId . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">

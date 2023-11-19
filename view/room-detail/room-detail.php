@@ -1,4 +1,5 @@
- <!-- Room Page Slider -->
+<?php  ?>
+<!-- Room Page Slider -->
  <header class="header slider">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
@@ -14,6 +15,7 @@
     <!-- Room Content -->
     <section class="rooms-page section-padding" data-scroll-index="1">
         <div class="container">
+            
             <!-- project content -->
             <div class="row">
                 <div class="col-md-12"> 
